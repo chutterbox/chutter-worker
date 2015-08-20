@@ -4,7 +4,16 @@ var webshot = require("webshot");
 var AWS = require("aws-sdk");
 /* GET users listing. */
 router.post('/screencap', function(req, res, next) {
-  console.log("here here");
+  console.log(req);
+  console.log(JSON.stringify(req.body));
+  // image_stream = webshot url, profiles[profile]
+
+  // image_buffers = []
+  // image_stream.on "data", (buffer) ->
+  //   image_buffers.push buffer
+  
+  // image_stream.on "error", (err) ->
+  //   res.reply "Webshot error: " + err
   AWS.config.update({
     accessKeyId: process.env.AWS_ACCESS_KEY_ID,
     secretAccessKey: process.env.AWS_SECRET_KEY,
