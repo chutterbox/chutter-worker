@@ -3,7 +3,7 @@ var router = express.Router();
 var webshot = require("webshot");
 var AWS = require("aws-sdk");
 /* GET users listing. */
-router.get('/screencap', function(req, res, next) {
+router.post('/screencap', function(req, res, next) {
   console.log("here here");
   // aws_akid = process.env.S3_AWS_ACCESS_KEY_ID
   // aws_sk = process.env.S3_AWS_SECRET_ACCESS_KEY
