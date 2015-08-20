@@ -5,6 +5,7 @@ var AWS = require("aws-sdk");
 /* GET users listing. */
 router.post('/screencap', function(req, res, next) {
   console.log(req.body);
+  console.log(typeof req.body);
   console.log(JSON.parse(req.body));
   res.sendStatus(200);
   // var params = JSON.parse(req.body);
