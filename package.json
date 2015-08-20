@@ -15,6 +15,7 @@
     "webshot": "0.16.0",
     "aws-sdk": "2.1.45",
     "serve-favicon": "~2.3.0",
-    "gm": "latest"
+    "gm": "1.18.1",
+    "request": "2.61.0"
   }
 }

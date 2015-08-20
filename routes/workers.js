@@ -33,6 +33,7 @@ router.post('/screencap', function(req, res, next) {
             res.send("S3 Upload error: " + err);
           }
           else{
+            
             res.send(data["Location"]);
           }
         })
