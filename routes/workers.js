@@ -5,6 +5,7 @@ var AWS = require("aws-sdk");
 /* GET users listing. */
 router.post('/screencap', function(req, res, next) {
   console.log("here here");
+  res.send(200);
   // aws_akid = process.env.S3_AWS_ACCESS_KEY_ID
   // aws_sk = process.env.S3_AWS_SECRET_ACCESS_KEY
   // aws_region = process.env.S3_AWS_REGION
