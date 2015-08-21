@@ -10,7 +10,7 @@ router.post('/screencap', function(req, res, next) {
     var screencap_url = params.screencap_url;
     var medium_id       = params.medium_id;
     var one_time_key = params.otk;
-
+    console.log(JSON.parse(req.body));
     if(screencap_url && one_time_key && medium_id){
       var image_stream = webshot(screencap_url);
       var image_buffers = [];
@@ -47,7 +47,7 @@ router.post('/screencap', function(req, res, next) {
         })
       })
     } else {
-      res.sendStatus(500);
+      res.sendStatus(200);
     }
   } catch (err) {
     console.log(err);
