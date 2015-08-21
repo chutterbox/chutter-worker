@@ -46,6 +46,8 @@ router.post('/screencap', function(req, res, next) {
           }
         })
       })
+    } else {
+      res.sendStatus(500);
     }
   } catch (err) {
     console.log(err);
