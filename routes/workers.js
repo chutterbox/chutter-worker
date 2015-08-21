@@ -11,7 +11,11 @@ router.post('/screencap', function(req, res, next) {
     var medium_id       = params.medium_id;
     var one_time_key = params.otk;
     console.log(JSON.parse(req.body));
+    console.log(screencap_url);
+    console.log(one_time_key);
+    console.log(medium_id);
     if(screencap_url && one_time_key && medium_id){
+      console.log("here");
       var image_stream = webshot(screencap_url);
       var image_buffers = [];
       image_stream.on("data", function(buffer){
