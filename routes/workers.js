@@ -37,7 +37,7 @@ router.post('/screencap', function(req, res, next) {
           }
           else{
             if(medium_id){
-              var update_url = 'http://localhost:3000/api/v1/media/'+medium_id+'/update_photo?otk='+one_time_key+'&s3_url='+data["Location"];
+              var update_url = 'http://chutter-api.elasticbeanstalk.com/api/v1/media/'+medium_id+'/update_photo?otk='+one_time_key+'&s3_url='+data["Location"];
               request(update_url, function (error, response, body) {
                 console.log(error);
               })
