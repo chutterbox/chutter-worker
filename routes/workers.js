@@ -34,7 +34,7 @@ router.post('/screencap', function(req, res, next) {
       aws_sk = process.env.S3_AWS_SECRET_ACCESS_KEY
       aws_region = process.env.S3_AWS_REGION
       AWS.config.update({accessKeyId: aws_akid, secretAccessKey: aws_sk, region: aws_region});
-      s3bucket = new AWS.S3({params: {Bucket: "chutter-screencaps/uploads"}})
+      s3bucket = new AWS.S3({params: {Bucket: "chutter-screencaps"}})
       image_stream.on("end", function(){
         image_data = Buffer.concat(image_buffers);
         params = {Key: ("screencap-"+medium_id+".jpg"), Body: image_data, ContentType: "image/jpg"}
