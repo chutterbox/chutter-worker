@@ -34,7 +34,7 @@ router.post('/screencap', function(req, res, next) {
       s3bucket = new AWS.S3({params: {Bucket: "chutter-screencaps/uploads"}})
       image_stream.on("end", function(){
         image_data = Buffer.concat(image_buffers);
-        params = {Key: (Math.random(1000)+".jpg"), Body: image_data, ContentType: "image/jpg"}
+        params = {Key: "screencap-"+medium_id+".jpg"), Body: image_data, ContentType: "image/jpg"}
         s3bucket.upload(params, function(err, data){
           if(err){
             res.send("S3 Upload error: " + err);
